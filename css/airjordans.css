@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Poppins:wght@200&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Poppins:wght@500&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Poppins:wght@300&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Poppins:wght@600&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.top{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+.header{
+    background-color: #1C1C1C;
+    width: 100%;
+    height: 60px;
+    /*box-shadow: 0 10px 40px 50px rgb(204, 64, 64) ;*/
+}
+
+.logo{
+    cursor: pointer;
+    padding-top: 3px;
+    margin-left: 39.8%;
+    width: 300px;
+    height:70px;
+}
+
+.scroll-watcher{
+    height: 10px;
+    top: 128px;
+    position: fixed;
+    z-index: 1000;
+    background-color: red;
+    width: 100%;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+  }
+  
+  @keyframes scroll-watcher{
+    to{ scale: 1 1;}
+  }
+
+.topnav {
+    overflow: hidden;
+    background-color: #1C1C1C;
+    padding-top: 16px;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+    transition: 0.4s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+    transition: 0.4s;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  @media screen and (max-width: 860px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: left;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }
+
+.brandname{
+    padding: 15px 0 10px 20px;
+    font-family: 'Poppins';
+    font-size: 50px;
+    font-weight: 500;
+    background-color: #f5f5f7;
+}
+
+.dark-mode .brandname{
+  background-color: #1C1C1C;
+  color: #f5f5f7;
+}
+
+.brandintro{
+    padding: 10px 25px 0px 20px;
+    font-family: 'Poppins';
+    /* font-weight: 800; */
+    /* font-size: large; */
+    background-color: #f5f5f7;
+}
+
+.dark-mode .brandintro{
+  background-color: #1C1C1C;
+  color: #f5f5f7;
+}
+
+.topvideos{
+    display: flex;
+    margin: 0;
+    border-bottom: 5px solid red;
+}
+.jordanvideol{
+    height: 320px;
+    opacity: 0.5;
+    margin-left: -110px;
+    padding-top: 80px;
+    width: 100%;
+    border-right: 2px solid black;
+}
+.jordanvideom{
+    height: 320px;
+    opacity: 0.5;
+    position: absolute;
+    padding-top: 80px;
+    padding-left: 465px;
+    /* width: 100%; */
+    /* margin-left: 35px; */
+    border-right: 2px solid black;
+}
+.jordanvideor{
+    height: 320px;
+    opacity: 0.5;
+    margin-left: 580px;
+    padding-top: 80px;
+    width: 100%;
+}
+
+.jordanlogo{
+  padding-top: 145px;
+  width: 100%;
+  height: 200px;
+  position: absolute; 
+}
+
+.arrow {
+    border: 2px solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.allfilters{
+    display: flex;
+}
+
+.sortprice{
+  display: flex;
+  padding: 10px;
+}
+
+.sortbtn{
+  margin-left: 20px;
+  border-radius: 0;
+  cursor: pointer;
+  width: 220px;
+  background-color: #1C1C1C;
+  color: #f2f2f2;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  font-size: 14px;
+  padding: 12px;
+  border: none;
+}
+
+.cart-button {
+  background-color: #555; /* Blue color */
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 125px;
+}
+
+.cart-button:hover {
+  background-color: #1C1C1C; /* Darker blue on hover */
+}
+
+.addtocart {
+  float: right;
+  padding: 15px;
+  margin-left: 37vw;
+  cursor: pointer;
+}
+
+.addtocart a:link{
+  text-decoration: none;
+}
+.addtocart a:visited {
+  text-decoration: none;
+}
+
+.addtocart a:hover {
+  text-decoration: underline;
+}
+
+.addtocart a:active {
+  text-decoration: underline;
+}
+
+/* .cartCounter{
+  background-color: #555;
+  font-size: 12px;
+  color: white;
+  border-radius: 50%;
+  padding: 2.5px 9px;
+  position: absolute;
+  top: 25px;
+  left: 98%;
+} */
+
+
+.page{
+    display:flex;
+    flex-wrap: wrap;
+    padding-top: 90px;
+    padding-left: 47px;
+}
+
+figure{
+    width: 230px;
+    z-index: -1;
+}
+
+.product{
+    position: relative;
+    padding-right: 110px;
+}
+
+.figcap{
+    font-family: 'Poppins';
+    padding-top: 270px;
+    padding-bottom: 70px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    width: 320px;
+}
+
+.atcbtn{
+  padding: 5px 14px;
+  margin-top: 10px;
+  background-color: #555;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.atcbtn:hover{
+  padding: 6.5px 15.5px;
+}
+
+#jordan{
+    font-weight: 400;
+    letter-spacing: 5px;
+    
+}
+
+
+
+.ajshoe{
+    position: relative;
+
+}
+.ajshoe img{
+    position: absolute;
+    height: 260px;
+    width: 307px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.ajshoe img.img-front:hover{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.hoj{
+  height: 500px;
+  margin-right: 8px;
+  margin-bottom: 70px;
+  border: 10px solid black;
+}
+
+.mjsign{
+  height: 300px;
+  margin-top: 100px;
+  margin-right: 57px;
+  opacity: 0.9;
+}
+
+.mjposter{
+  height: 500px;
+  margin-left: 48px;
+  margin-bottom: 70px;
+  border: 10px solid rgb(233, 37, 37);
+}
+
+@media screen and (max-width: 600px) {
+  
+  .logo{
+    margin-left: 100px;
+    padding-top: 10px;
+    height: 50px;
+    width: 280px;
+  }
+  .jordanvideol{
+    opacity: 0;
+  }
+  .jordanvideor{
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  .jordanvideom{
+    height: 330px;
+    opacity: 0.5;
+    position: absolute;
+    padding-top: 190px;
+    padding-left: 0px;
+    /* width: 100%; */
+    /* margin-left: 35px; */
+    border-right: 0px solid black;
+    width: 100%;
+  }
+  .topvideos{
+    border: 0px;
+  }
+  .jordanlogo{
+    padding-top: 300px;
+    height: 120px;
+  }
+  .brandname{
+    padding: 105px 0 0px 110px;
+    font-family: 'Poppins';
+    font-size: 50px;
+    font-weight: 500;
+    background-color: #f5f5f7;
+  }
+  .product{
+    padding-right: 0px;
+  }
+  .ajshoe img{
+    height: 160px;
+    width: 207px;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .figcap{
+    font-family: 'Poppins';
+    padding-top: 200px;
+    padding-bottom: 70px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    width: 220px;
+  }
+  .page{
+    padding-left: 20px;
+  }
+  .hoj{
+    background-color: red;
+    height: 550px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 70px;
+    border: 10px solid black;
+  }
+  .mjsign{
+    height: 250px;
+    margin-top: 0px;
+    margin-right: 40px;
+    opacity: 0.9;
+    }
+}
+
+.darkmodebtn{
+  background-color: #555; /* Blue color */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 23px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 175px;  
+  margin-left: 20px;
+}
+
+.darkmodebtn:hover {
+  background-color: #1C1C1C; /* Darker blue on hover */
+}
+
+
+
+
+
+
+
+
+
+
